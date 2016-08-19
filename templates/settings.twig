@@ -1,0 +1,36 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	label: "Type"|t('app'),
+	instructions: "This is an example of a setting type."|t('app'),
+	id: 'type',
+	name: 'type',
+	value: settings.type,
+	errors: settings.getErrors('type'),
+	autofocus: true,
+	required: true,
+	translatable: true
+}) }}
+
+{{ forms.textField({
+	label: "Section"|t('app'),
+	instructions: "Another example of a plugin setting."|t('app'),
+	id: 'section',
+	name: 'section',
+	value: settings.section,
+	errors: settings.getErrors('section'),
+	autofocus: true,
+	required: true,
+	translatable: true
+}) }}
+
+{{ forms.textField({
+	label: "Email"|t('app'),
+	instructions: "A final example of a setting."|t('app'),
+	id: 'Email',
+	name: 'email',
+	value: settings.email,
+	errors: settings.getErrors('email'),
+	autofocus: true,
+	translatable: true
+}) }}
